@@ -30,9 +30,14 @@ if [ $swcon == "y" ]; then
   cd ../st          && sudo make clean install
   cd ../dmenu       && sudo make clean install
   cd ../dwmblocks   && sudo make clean install
-  cd ../slock       && sudo make clean install
+  cd ../slock       && sudo make clean install && cd ..
 else
   echo "Skipping..."
 fi
 
-echo "Setup complete!"
+# Vim setup
+vimplug=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs $vimplug
+vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
+
+echo "Setup complete! Log out and back in or run startx."

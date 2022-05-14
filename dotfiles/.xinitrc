@@ -1,5 +1,5 @@
 setxkbmap gb &
 dwmblocks &
 unclutter &
-feh --bg-tile ~/Pictures/wallpapers/mLRrqEC.png &
+feh --bg-tile ~/Pictures/wallpapers/star.png &
 exec dwm

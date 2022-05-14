@@ -13,5 +13,9 @@ Open directory and run the install script.
 
 ## Additional configuration
 
-Vim will require some additional configuration, namely vim-plug which can be
-found at https://github.com/junegunn/vim-plug.
+Vim will require some additional configuration, open vim and install the
+plugins included.
+
+```
+:PlugInstall
+```
