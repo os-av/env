@@ -1,9 +1,10 @@
 set number
 set laststatus=2
 set cursorline
-set shiftwidth=2
-set tabstop=2
-set expandtab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set noexpandtab
 set ignorecase
 set showcmd
 set history=500
@@ -12,7 +13,8 @@ set updatetime=300
 set signcolumn=yes
 set cc=80,100
 set cmdheight=2
-set noshowmode
+set wildmenu
+set showmatch
 
 syntax on
 
@@ -23,19 +25,18 @@ Plug 'yggdroot/indentline'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'terryma/vim-multiple-cursors'
 
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'tomasr/molokai'
+Plug 'rafi/awesome-vim-colorschemes'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-let g:onedark_termcolors=256
 set background=dark
-colorscheme PaperColor
+colorscheme jellybeans
 
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
+      \ 'colorscheme': 'jellybeans',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -45,7 +46,7 @@ let g:lightline = {
       \ },
       \ }
 
-:map <C-n> :NERDTreeTabsToggle<CR>
+:map <C-t> :NERDTreeTabsToggle<CR>
 :map <C-p> :CtrlP<CR>
 
 " Mappings for CoCList
