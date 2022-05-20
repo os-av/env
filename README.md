@@ -19,3 +19,5 @@ plugins included.
 ```
 :PlugInstall
 ```
+See conquer of completion for setting up autocompletion.
+https://github.com/neoclide/coc.nvim

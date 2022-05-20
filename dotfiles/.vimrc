@@ -11,10 +11,11 @@ set history=500
 set ruler
 set updatetime=300
 set signcolumn=yes
-set cc=80,100
+set cc=80,120
 set cmdheight=2
 set wildmenu
 set showmatch
+set encoding=utf-8
 
 syntax on
 
@@ -33,16 +34,19 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 set background=dark
-colorscheme jellybeans
+colorscheme PaperColor
 
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'PaperColor',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \   'left':  [ [ 'mode', 'paste' ],
+      \              [ 'gitbranch', 'readonly', 'filename', 'modified' ],
+	  \				 [ 'cocstatus', 'readonly' ] ],
+	  \	  'right': [ [ 'lineinfo'], ['percent'], ['filetype'] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
+      \   'gitbranch': 'FugitiveHead',
+	  \   'cocstatus': 'coc#status'
       \ },
       \ }
 
